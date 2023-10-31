@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["esnext"],
+    "module": "CommonJS",               // Specify the module system (CommonJS for Node.js).
+    "outDir": "./dist",                 // Define the output directory for transpiled files.
+    "rootDir": "./src",                 // Specify the source directory where TypeScript files are located.
+    "declaration": true,                // Generate .d.ts declaration files for consumers of your package.
+    "strict": true,                     // Enable strict type checking.
+    "esModuleInterop": true,            // Enable compatibility with CommonJS modules.
+    "skipLibCheck": true,               // Skip type checking of declaration files.
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file name casing for cross-platform compatibility.
+    "jsx": "react"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
