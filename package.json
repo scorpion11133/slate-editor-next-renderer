@@ -1,6 +1,6 @@
 {
   "name": "@scorpion11133/slate-editor-next-renderer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "private": false,
   "main": "index.js",
@@ -8,11 +8,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Heorhii Vereshchaha <scorpion11133@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scorpion11133/slate-editor-next-renderer"
+  },
   "license": "ISC",
   "peerDependencies": {
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "next": "14.0.0",
+    "next": "^14",
     "react": "^18",
     "react-dom": "^18"
   },
