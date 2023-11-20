@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "publish": "npm version patch && npm publish"
+    "pub": "npm version patch && npm publish"
   },
   "author": "Heorhii Vereshchaha <scorpion11133@gmail.com>",
   "repository": {
