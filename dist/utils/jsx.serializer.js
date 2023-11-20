@@ -7,6 +7,29 @@ exports.jsxSerializer = void 0;
 const react_1 = __importDefault(require("react"));
 // @ts-ignore
 const link_1 = __importDefault(require("next/link"));
+var NodeType;
+(function (NodeType) {
+    NodeType["Paragraph"] = "paragraph";
+    NodeType["ListItem"] = "list-item";
+    NodeType["OrderedList"] = "orderedList";
+    NodeType["UnorderedList"] = "unorderedList";
+    NodeType["Link"] = "link";
+    NodeType["WithClassNames"] = "withClassNames";
+    NodeType["ColorPicker"] = "color-picker";
+    NodeType["Color"] = "color";
+    NodeType["HeadingOne"] = "headingOne";
+    NodeType["HeadingTwo"] = "headingTwo";
+    NodeType["HeadingThree"] = "headingThree";
+    NodeType["HeadingFour"] = "headingFour";
+    NodeType["HeadingFive"] = "headingFive";
+    NodeType["HeadingSix"] = "headingSix";
+    NodeType["AlignLeft"] = "alignLeft";
+    NodeType["AlignCenter"] = "alignCenter";
+    NodeType["AlignRight"] = "alignRight";
+    NodeType["Bold"] = "bold";
+    NodeType["Italic"] = "italic";
+    NodeType["Underline"] = "underline";
+})(NodeType || (NodeType = {}));
 const uuidShort = () => Math.floor((1 + Math.random()) * 0x10000)
     .toString(16)
     .substring(1);
@@ -49,29 +72,35 @@ function serialize(node, variables) {
     }
     const children = node?.children?.map((n) => serialize(n, variables));
     switch (node.type) {
-        case "paragraph":
+        case NodeType.Paragraph:
             return react_1.default.createElement("p", { key: uuidShort() }, children);
-        case "link":
+        case NodeType.Link:
             const { Component, props } = getLinkComponent(node, variables);
             //@ts-ignore
             return react_1.default.createElement(Component, { key: uuidShort(), ...props }, children);
-        case "headingOne":
+        case NodeType.HeadingOne:
             return react_1.default.createElement("h1", { key: uuidShort() }, children);
-        case "headingTwo":
+        case NodeType.HeadingTwo:
             return react_1.default.createElement("h2", { key: uuidShort() }, children);
-        case "headingThree":
+        case NodeType.HeadingThree:
             return react_1.default.createElement("h3", { key: uuidShort() }, children);
-        case "unorderedList":
+        case NodeType.HeadingFour:
+            return react_1.default.createElement("h4", { key: uuidShort() }, children);
+        case NodeType.HeadingFive:
+            return react_1.default.createElement("h5", { key: uuidShort() }, children);
+        case NodeType.HeadingSix:
+            return react_1.default.createElement("h6", { key: uuidShort() }, children);
+        case NodeType.UnorderedList:
             return react_1.default.createElement("ul", { key: uuidShort() }, children);
-        case "list-item":
+        case NodeType.ListItem:
             return react_1.default.createElement("li", { key: uuidShort() }, children);
-        case "alignLeft":
+        case NodeType.AlignLeft:
             return react_1.default.createElement("div", { key: uuidShort() }, children);
-        case "alignCenter":
+        case NodeType.AlignCenter:
             return react_1.default.createElement("div", { key: uuidShort(), style: { textAlign: "center" } }, children);
-        case "alignRight":
+        case NodeType.AlignRight:
             return react_1.default.createElement("div", { key: uuidShort(), style: { textAlign: "right" } }, children);
-        case "withClassNames":
+        case NodeType.WithClassNames:
             return react_1.default.createElement("span", { key: uuidShort(), className: node.attr?.className }, children);
         default:
             //   @ts-ignore
