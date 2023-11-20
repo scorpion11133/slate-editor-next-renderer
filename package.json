@@ -5,12 +5,12 @@
   "private": false,
   "main": "index.js",
   "scripts": {
-    "publish": "npm version patch --force && npm publish"
+    "publish": "npm version patch && npm publish"
   },
   "author": "Heorhii Vereshchaha <scorpion11133@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scorpion11133/slate-editor-next-renderer"
+    "url": "git+https://github.com/scorpion11133/slate-editor-next-renderer.git"
   },
   "license": "ISC",
   "peerDependencies": {
