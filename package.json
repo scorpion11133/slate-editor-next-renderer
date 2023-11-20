@@ -5,7 +5,7 @@
   "private": false,
   "main": "index.js",
   "scripts": {
-    "updateVersion": "npm version patch --force",
+    "updateVersion": "npm version patch",
     "publish": "npm publish"
   },
   "author": "Heorhii Vereshchaha <scorpion11133@gmail.com>",
