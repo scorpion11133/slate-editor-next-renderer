@@ -1,11 +1,12 @@
 {
   "name": "@scorpion11133/slate-editor-next-renderer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "private": false,
   "main": "index.js",
   "scripts": {
-    "pub": "npm version patch --force && npm publish"
+    "updateVersion": "npm version patch --force",
+    "publish": "npm publish"
   },
   "author": "Heorhii Vereshchaha <scorpion11133@gmail.com>",
   "repository": {
