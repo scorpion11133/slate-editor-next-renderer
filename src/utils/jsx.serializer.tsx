@@ -9,7 +9,6 @@ enum NodeType {
     UnorderedList = "unorderedList",
     Link = "link",
     WithClassNames = "withClassNames",
-    ColorPicker = "color-picker",
     Color = "color",
     HeadingOne = "headingOne",
     HeadingTwo = "headingTwo",
