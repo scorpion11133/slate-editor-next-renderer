@@ -15,7 +15,6 @@ var NodeType;
     NodeType["UnorderedList"] = "unorderedList";
     NodeType["Link"] = "link";
     NodeType["WithClassNames"] = "withClassNames";
-    NodeType["ColorPicker"] = "color-picker";
     NodeType["Color"] = "color";
     NodeType["HeadingOne"] = "headingOne";
     NodeType["HeadingTwo"] = "headingTwo";
